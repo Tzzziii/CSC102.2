@@ -1,0 +1,32 @@
+<!--Assignment 2.1: The Building Blocks for Javascript - Functions
+ Sarah M. Repository Link: https://github.com/Tzzziii/CSC102.2-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors Game</title> <!--Or if you're Korean, the Korean romanization sounds like gawi-bawi-bo!-->
+    <style>
+        /*Making the text look cool and centered. I wanted to do custom fonts but they're sometimes a pain*/
+        body {
+            background-color: rgb(167, 202, 187); /*I did want to change the BG color but it doesn't seem to be applying?*/
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <p>Choose your weapon:</p>
+    <!-- Buttons for rock, paper, and scissors - what will you pick? -->
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <!-- This signals where the result will show -->
+    <div id="result"></div>
+
+     <!--I wanted to add display images/gifs based on whether you win, lose, or tie, but for some reason I couldn't get the .js to work :|.
+        I thought about adding sound but having to find free mp4's also would've been difficult-->
+
+    <!--Linking to my super smart code in another file! See it in the repository at https://github.com/Tzzziii/CSC102.2 Name code.js per assignment requirement -->
+    <script src="code.js"></script>
+</body>
+</html>
