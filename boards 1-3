@@ -1,0 +1,25 @@
+<!-- This is Assignment 1:1, The Foundation.2 - boards.html -->
+<!-- Sarah McWhite; CSC102 -->
+
+<!DOCTYPE html>
+<html>
+<!--This is the title-->
+<head>
+    <link rel="stylesheet" href="main.css"> <!--This links the boards 1-3 file to my .css-->
+    <title>Assignment 1:1 - The Foundation But this time I added more words because I had to change it</title>
+</head>
+
+<!--This is the header.-->
+<header>
+    <h1>UAT Objectives!</h1> <!--Found at https://www.uat.edu/uat-catalogs-->
+    <p><b>LEARN MORE</b> <!--<b> is the element to bold text.-->
+        <br>about all aspects of UAT life including our respected technology degree programs representing the leading edge of science and art innovation, plus everything you need to know about admissions procedures, policies, tuition, scholarships, financial aid, residence life, academics, governance and more.
+        <br><b>DISCOVER MORE</b>
+        <br>about UAT&apos;s distinctive features that set us apart as an intimate, private technology University focused on educating students in advancing technology who desire to innovate for our future. Changing the world through technology is inherent in UAT&apos;s mission which embodies UAT&apos;s core reason for being—to advance global society by developing premier thinkers for a lifetime of innovation. The technology University&apos;s respected Synchronic Learning model provides an individualized, interactive, enriched education experience that creates a new generation of leaders ready to transform the world we live in.
+        <br><b>CONNECT MORE</b>
+        <br>to campus life, our team of faculty, staff and administrators and Geek culture comprised of a unique collective of individuals indigenous to the digital realm who share their passion for technology and live for the next great adventure in technology innovation.
+        <!--A Meme Image was once here. RIP-->
+    </p>
+</header>
+</body>
+</html>

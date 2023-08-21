@@ -1,0 +1,34 @@
+/*For the body properties*/
+body {
+    background-color: rgb(60, 82, 73); /*This is in the spectrum of my favorite color!*/
+    color: rgb(58, 212, 166); /*This is also in the spectrum of my favorite color :D I love Sea Green and sage green-ish colors*/
+}
+
+/*For the nav properties*/
+header {
+    height: 6000px;
+    width: 200px;
+    float: left;
+    padding: 5px; /*Padding gives smace around your text*/
+    line-height: 30px;
+}
+
+/*For the footer properties*/
+footer {
+    text-align: center; /*This sets sets the text to center whereas it normally defaults to the left*/
+    margin-right: 200px;
+}
+
+/*For the #memeImage properties*/
+#memeImage {
+    margin-right: 200px;
+}
+
+/*For the header properties*/
+h1 {
+    text-align: center;
+}
+
+/*And a joke:  Why couldn't the 11 year old see a new movie?
+
+It was raised "Arr!" :D*/
