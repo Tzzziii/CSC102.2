@@ -1,0 +1,247 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 400px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: calc(50% - 5px);
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  input[type="submit"] {
+    background-color: #ebebeb;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+
+    padding: 20px;
+    padding-top: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  @media (max-width: 767px) {
+    .form-group {
+      width: 100%;
+    }
+  }
+  
+  /* Additional margin for spacing */
+  .form-group:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+
+.header-container {
+    display: flex;
+    align-items: center; /*vertically centers the header elements*/
+  }
+
+.banner {
+    background-color: #30549b;
+    color: white;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+font-size: 2.5em;
+  margin: 0;
+  word-wrap: break-word;
+a {
+  color: white;
+} /*This sets the base color of hyperlinks as white*/
+
+a:active {
+  color: inherit;
+} /*This removes the purple color on active (clicked) links*/
+
+a:visited {
+  color: inherit;
+} /*This removes the purple color on visited (clicked) links*/
+
+@font-face{
+font-family: Arial, Helvetica, sans-serif
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: flex; /*This displays the u1 items side by side instead of stacked*/
+    align-items: center; /*This centers the u1 tags in their margins*/
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+  }
+  
+button {
+        border-radius: 20px; 
+        border: solid;
+        border-color: #7cb1ff;
+        background-color: #30549b;
+        margin-right: 20px;
+        padding: 10px 20px;
+        text-align: center;
+        background-color: transparent; /*Removes the BG color of a button*/
+        color: rgb(176, 208, 255)
+        
+}
+
+button:hover {
+  background-color: rgb(160, 160, 160);
+  color: #ffffff;
+}
+
+button:focus {
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: aqua;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  width: 45%;
+  margin-right: 5%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.blog-post p{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  max-width: 500px;
+  width: calc(50% - 20px);
+  margin: 0 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden /*hides text that goes beyong set border*/
+  
+}
+
+.blog-post img {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 30px !important;
+  height: auto
+}
+
+.blog-post h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  word-break: break-all;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 +250px;
+}
+
+article {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+article { /*this sets a max height for the entire article that will cut off*/
+  max-height: 500px; 
+  overflow: hidden;
+}
+
+.read-more { /*tags to style the read more button*/
+  background-color: #ddddddab;
+  color: #4b4b4b;
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.post-content {
+  margin-bottom: 40px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+  position: relative;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+nav li:hover .dropdown {
+  display: block;
+}
+
+/*ALL info below is footer info*/
+footer {
+  background-color: #181c31;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/*Footer Info End*/

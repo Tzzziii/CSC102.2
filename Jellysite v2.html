@@ -1,0 +1,162 @@
+<!--Sarah McWhite, FINAL Project for CSC 102. Feb 10 2023-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellysite</title>
+    <link rel="stylesheet" href="JellysiteV2CSS.css"> <!--links .html to thee seperate .css. css file makes evereything look nicee-->
+    <link rel="stylesheet" href="JellysiteV2.js"> <!--links .html to the seperate .js-->
+</head>
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #c7cffc;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #152647
+    
+  }
+</style>
+
+<body>
+    <header class="banner">
+        <h1></h1> 
+        <nav>
+            <ul>
+              <a href="Jellysite v2.html">
+              <img src="https://i.gyazo.com/31fcc74223c7db6f5a8689698e3ff254.png" alt="Jellysite Dummy Logo">
+             </a>
+              <li class="dropdown">
+                <a href="JellysiteAboutUs.html">Who We Are</a> <!--othere page creeated by me as part of the final-->
+                <div class="dropdown-content">
+                    <a href="JellysiteAboutUs.html">Who We Are</a>
+                    <a href="Error500.html">Purpose and Core Beliefs</a> <!--The Error500.html was not created by me, it was created by https://codepen.io/edwinchen26 listed on a "Free to use" website. It is here as Jellysite is meaent to mimic a functioning website but allows me to omit the work for that.-->
+					        	<a href="Error500.html">Why Jellyfish?</a>
+               </div>
+
+             <li class="dropdown">
+              <a href="Error500.html">What We Do</a>
+               <div class="dropdown-content">
+                    <a href="Error500.html">What We Do</a>
+                    <a href="https://www.merriam-webster.com/dictionary/project">Projects</a> <!--Dummy website so the hyperlink button is active-->
+                    <a href="https://www.merriam-webster.com/dictionary/impact">Impact</a> <!--Dummy website so the hyperlink button is active-->
+                </div>
+                
+              <li class="dropdown">
+                <a href="Error500.html">News</a>
+                <div class="dropdown-content">
+                    <a href="Error500.html">What We Do</a>
+                    <a href="Error500.html">Projects</a>
+					        	<a href="Error500.html">Impact</a>
+
+              <li class="dropdown">
+                 <a href="ContactUsForm.html">Contact Us</a> <!--other page created by me as part of the final-->
+                 <div class="dropdown-content">
+                     <a href="ContactUsForm.css">Contact Us</a>
+                     <a href="Error500.html">FAQ</a>
+                     <a href="Error500.html">Contact Form </a>
+                 </div>
+                 
+               <li class="dropdown">
+                <a href="JellysiteJoinUs.html">Become a Jelly</a> <!--other page officially created as part of thee final-->
+                <div class="dropdown-content">
+                     <a href="JellysiteJoinUs.html">Become a Jelly</a>
+                      <a href="Error500.html">Become a Member</a>
+                      <a href="Error500.html">Volunteer</a>
+               </div>
+
+                <li><button><a href="Error500.html">Donate</a></button></li> <!--non-working button-->
+                <li><button><a href="Error500.html">Shop now</a></button></li><!--non-working button-->
+             </ul>
+            </nav>
+              </header>
+              <main>
+                <div class="blog-container">
+                  <div class="blog-post"><!--example/pretend blog post-->
+                    <img src="https://media.istockphoto.com/id/521577041/photo/ready-to-push-a-medusa.jpg?s=612x612&w=0&k=20&c=BGfJDZga87dgFxu9Sy5qsi95e_FpUt741JlJUWwxwUU=" alt="Stock photo of a woman's food steppong on a jellyfish in the sand">
+                    <h1>Australia Sees a Rise in Jellyfish Stings</h1> <!--sample blog post title-->
+                    <div class="post-content">
+                      <button class="read-more"><a href="https://www.archives.gov/founding-docs/constitution-transcript">Read more</a></button> <!--input as a temp hyperlink-->
+                    </div>
+                  </div>
+                
+                  <div class="blog-post"> <!--example/pretend blog post-->
+                    <img src="https://media.istockphoto.com/id/532133994/photo/portuguese-man-o-war.jpg?s=1024x1024&w=is&k=20&c=5d-F0oyiS1SIU6qN9_cCNdVcrC25GzL191a-mX0TIy4=" alt="stock photo of a Man O'War Jellyfish on top of sand">
+                    <h1>Our Team Cleaning Up the Coast</h1> <!--samplee blog post title-->
+                    <div class="post-content">
+                      <button class="read-more"><a href="https://www.archives.gov/founding-docs/declaration-transcript">Read more</a></button> <!--input as a temp hyperlink-->
+
+                    </div>
+                  </div>
+                </div>
+              </main>
+
+              <section>
+                <h2>Jellyfish Species Information</h2> <!--table of jeellyfish info. IF I were to keeep expanding on this site, I would attach hyperelinks to each jellyfish in thee table-->
+        
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Species</th> <!--lines 122-124 detail what info is in the table-->
+                            <th>Color</th>
+                            <th>Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aurelia aurita</td>
+                            <td>Translucent</td>
+                            <td>15-30 cm</td>
+                        </tr>
+                        <tr>
+                            <td>Chrysaora fuscescens</td>
+                            <td>Pink to brown</td>
+                            <td>30-50 cm</td>
+                        </tr>
+                        <tr>
+                            <td>Cyanea capillata</td>
+                            <td>Red to purple</td>
+                            <td>2 meters or more</td>
+                        </tr>
+                        <tr>
+                            <td>Phacellophora camtschatica</td>
+                            <td>White</td>
+                            <td>Up to 3 meters</td>
+                        </tr>
+                        <!-- to add more rows, follow above examples -->
+                    </tbody>
+                </table>
+            </section>
+              
+</body>
+<footer> <!--footer is on bottom of the page, customized in the .css-->
+  <li><a href="ContactUsForm.html">Contact Us &#x2709;</a></li>
+<p>info@jellysiteteam.org</p>
+<p>Sarah McWhite<br>
+  University of Advancing Technology<br>
+  2625 W Baseline Rd<br>
+  Tempe, AZ 85283<br></p>
+</footer>
+</html>
