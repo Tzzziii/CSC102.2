@@ -1,0 +1,88 @@
+<!--Assignment 4.1: Event Driven Programming-->
+<!--Sarah McWhite, UAT-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Meme</title>
+    <style>
+        /*styling for a better user experience*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #8fdfff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer; /*changes the cursor. for otheer options they can be downloaded online!*/
+        }
+    </style>
+</head>
+<body>
+    <!--meme image, surfing pikachu taken from the official pokemon site @https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/-->
+    <img id="movingMeme" src="https://media.discordapp.net/attachments/1180404870583418932/1206088729811361873/PL2_EN_114.png?ex=65dabca9&is=65c847a9&hm=d22bbad59c52801e0c34448a0ac20ebb8b949d9f0146230bf31b87c6ddabd4c4&=&format=webp&quality=lossless" alt="Meme Image">
+
+    <!--start & stop buttons w/ onclick events-->
+    <button id="startButton" onclick="startMoving()">Start</button>
+    <button id="stopButton" onclick="stopMoving()" disabled>Stop</button>
+
+    <script> //js starts here
+        //get references to the buttons and image
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const movingMeme = document.getElementById('movingMeme');
+        let isMoving = false; //flag to track whether the image is currently moving
+
+        //function to start moving image
+        function startMoving() {
+            isMoving = true; //sets the flag to true
+            startButton.disabled = true; //disables the Start button
+            stopButton.disabled = false; //enables the Stop button
+            moveImage(); //calls the function to move the image
+        }
+
+        //function to stop moving image
+        function stopMoving() {
+            isMoving = false; //set the flag to false
+            stopButton.disabled = true; //disables the Stop button
+            startButton.disabled = false; //enables the Start button
+        }
+
+        // function to move image around the page
+        function moveImage() {
+            if (isMoving) {
+                //calculates new positions for the image (more vertical movement)
+                const newX = Math.random() * (window.innerWidth - movingMeme.width);
+                const newY = Math.random() * (window.innerHeight - movingMeme.height) * 0.8; // Adjusted to move more vertically
+
+                //apply the new position using CSS transform
+                movingMeme.style.transform = `translate(${newX}px, ${newY}px)`;
+
+                //function that changes the direction randomly
+                const directionChange = Math.random();
+                if (directionChange < 0.01) { // Adjust the probability of direction change
+                    movingMeme.style.transform += ` rotate(${Math.random() * 360}deg)`; // Rotate randomly
+                }
+
+                //used requestAnimationFrame to create a smoother animation loop
+                requestAnimationFrame(moveImage);
+            }
+        }
+    </script> <!--end of the js-->
+</body>
+</html>
+<!--end of HTML-->
