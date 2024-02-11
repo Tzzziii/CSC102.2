@@ -1,0 +1,104 @@
+<!--Assignment 4.2: Incorporate Audio
+Sarah McWhite, UAT-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikachu Surfin'</title>
+    <style>
+        /*styling for better user experience*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #8fdfff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer; /*changes the cursor - cursors can be cusomized though!*/
+        }
+    </style>
+</head>
+<body>
+    <!--meme image!! taken from https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/-->
+    <img id="movingMeme" src="https://media.discordapp.net/attachments/1180404870583418932/1206088729811361873/PL2_EN_114.png?ex=65dabca9&is=65c847a9&hm=d22bbad59c52801e0c34448a0ac20ebb8b949d9f0146230bf31b87c6ddabd4c4&=&format=webp&quality=lossless" alt="Meme Image">
+
+    <!--audio of airplanee noise 'cause he's flying for suree. audio pulled from https://soundbible.com/2195-Airplane-Takeoff.html-->
+    <audio id="audio" src="airplanenoise.mp3" preload="auto"></audio>
+
+    <!--start & stop buttons w/ onclick events-->
+    <button id="startButton" onclick="startMoving()">Start</button>
+    <button id="stopButton" onclick="stopMoving()" disabled>Stop</button>
+
+    <script> //js starts here
+        //gets references to the buttons, image, and audio
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const movingMeme = document.getElementById('movingMeme');
+        const audio = document.getElementById('audio');
+        let isMoving = false; //flag to track whether the image is currently moving
+
+        //function to start moving image and play audio
+        function startMoving() {
+            isMoving = true; //sets the flag to true
+            startButton.disabled = true; //disables the Start button
+            stopButton.disabled = false; //enables the Stop button
+            moveImage(); //calls the function to move the image
+            playAudio(); //calls the function to play audio
+        }
+
+        //function to stop moving image
+        function stopMoving() {
+            isMoving = false; //sets the flag to false
+            stopButton.disabled = true; //disables the Stop button
+            startButton.disabled = false; //enables the Start button
+            pauseAudio(); //calls the function to pause audio
+        }
+
+        //function to move the meme image around the page
+        function moveImage() {
+            if (isMoving) {
+                //calculate new positions for the image (more vertical movement)
+                const newX = Math.random() * (window.innerWidth - movingMeme.width);
+                const newY = Math.random() * (window.innerHeight - movingMeme.height) * 0.8; // Adjusted to move more vertically
+
+                //apply the new position using CSS transform
+                movingMeme.style.transform = `translate(${newX}px, ${newY}px)`;
+
+                //change directions randomly
+                const directionChange = Math.random();
+                if (directionChange < 0.01) { //adjusts the probability of direction change
+                    movingMeme.style.transform += ` rotate(${Math.random() * 360}deg)`; //Rotates randomly
+                }
+
+                //requestAnimationFrame creates a smoother animation loop
+                requestAnimationFrame(moveImage);
+            }
+        }
+
+        //function to play audio (seperate from pressing start/top button)
+        function playAudio() {
+            audio.play();
+        }
+
+        //function to pause audio (seperate from pressing start/top button)
+        function pauseAudio() {
+            audio.pause();
+        }
+    </script> <!--signals the end of the JS -->
+</body>
+</html>
+<!--end of HTML-->
