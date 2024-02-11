@@ -1,0 +1,97 @@
+<!--Assignment 3.2: User Input Validation-->
+<!--Sarah McWhite, UAT-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker & User Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://i.pinimg.com/originals/81/5f/2e/815f2e2a124157c630bb74a67dd5fc1f.jpg'); /*Creative element: background image*/
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 8px;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Palindrome Checker & User Information</h1>
+    <p>Palindrome Words: They’re the Same Backwards and Forwards! Check if your word is a palindrome!</p>
+
+    <!-- form for user info-->
+    <form id="userInfoForm">
+        <!--input for first name-->
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+
+        <!--input for last name-->
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+
+        <!--input for zip code-->
+        <label for="zipCode">Zip Code:</label>
+        <input type="text" id="zipCode" pattern="\d{5}" title="Please enter a valid 5-digit zip code" required>
+
+        <!--submit button-->
+        <button type="button" onclick="checkPalindromeAndUserInfo()">Submit</button>
+    </form>
+
+    <!--js code starts here-->
+    <script>
+        //function to check if the string is a palindrome
+        function isPalindrome(str) {
+            const cleanStr = str.replace(/\s/g, '').toLowerCase();
+            const reversedStr = cleanStr.split('').reverse().join('');
+            return cleanStr === reversedStr;
+        }
+
+        //function to check user's info
+        function checkPalindromeAndUserInfo() {
+            //get user input values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const zipCode = document.getElementById('zipCode').value;
+
+            //combine first & last name
+            const fullName = `${firstName} ${lastName}`;
+
+            //check if combined name has more than 20 characters
+            if (fullName.length > 20) {
+                alert('Invalid input: Combined name should not exceed 20 characters.');
+                return; //invalid error, will not continue if invalid
+            }
+
+            //checks if zip code is valid (speecifically is checking for a 5 digit code)
+            if (!/^\d{5}$/.test(zipCode)) {
+                alert('Invalid zip code: Please enter a valid 5-digit zip code.');
+                return; //invalid error, will not continue if invalid
+            }
+
+            //checks if the combined name is a palindrome
+            const isNamePal = isPalindrome(fullName);
+
+            //displays the result to user
+            if (isNamePal) {
+                alert(`"${fullName}" is a palindrome!\nSecret message: You found the hidden message!`);
+            } else {
+                alert(`"${fullName}" is not a palindrome.\nSecret message: Keep searching for the hidden message!`);
+            }
+        }
+    </script>
+    <!--js ends here-->
+
+</body>
+</html> <!--html ends here-->
