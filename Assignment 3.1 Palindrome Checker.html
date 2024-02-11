@@ -1,0 +1,67 @@
+<!---Assignment 3.1: Palindrome Checker
+Sarah McWhite, UAT-->
+
+<!DOCTYPE html> <!--Begins the code-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker!</title> 
+    <style> <!--changes here change what the words look like-->
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #bab9ff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            margin-top: 10px; <!--gives more space on the top-->
+            padding: 8px; <!--gives more space around the button-->
+            font-size: 20px; <!--self explanatory but increases font size-->
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Palindrome Checker</h1> <!--header-->
+    <p>Palindrome Words: They’re the Same Backwards and Forwards! Check if your word is a palindrome!</p> <!--text on page-->
+
+    <!--starts of the js-->
+    <script>
+        //Function to check if the string is a palindrome
+        function isPalindrome(str) {
+            //Remove spaces and convert to lowercase for accurate palindrome check
+            const cleanStr = str.replace(/\s/g, '').toLowerCase();
+            const reversedStr = cleanStr.split('').reverse().join('');
+            return cleanStr === reversedStr;
+        }
+
+        // Main loop
+        while (true) {
+            //prompts the user to enter a string
+            const userString = prompt("Enter a word:");
+
+            //checks if the user wants to exit the loop
+            if (userString === null || userString.toLowerCase() === 'exit') {
+                break;  //exits the loop if prompted
+            }
+
+            //this checks if the input string is a palindrome
+            const isPal = isPalindrome(userString);
+
+            //displays result to the user through if->else
+            if (isPal) {
+                alert(`"${userString}" is a palindrome!`);
+            } else {
+                alert(`"${userString}" is not a palindrome.`);
+            }
+        }
+    </script>
+    <!-- js ends here -->
+
+</body>
+</html>
+<!--html ends here-->
